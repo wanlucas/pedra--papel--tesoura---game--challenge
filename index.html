@@ -2,36 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
-
-  Score
-  Rules
-
-  You Picked
-  The House Picked
-
-  You Win
-  You Lose
-
-  Play Again
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-
-  
+  <header>
+    <div class="header-left">
+        <h1>ROCK PAPER SCISSORS</h1>
+    </div>
+   <div class="score-box">
+     <P>SCORE</P>
+     <h2 id="score">12</h2>
+   </div>
+  </header>
+  <main>
+    <div class="choise-box">
+       <div>
+         <button aria-label="paper"><img src="images/icon-paper.svg" alt="paper"></button>
+       </div>
+       <div>
+         <button aria-label="scissor"><img src="images/icon-scissors.svg" alt="scissor"></button>
+       </div>
+       <div>
+          <button aria-label="rock"><img src="images/icon-rock.svg" alt="rock"></button>
+       </div>
+    </div>
+    <button id="rules">RULES</button>
+    <section class="rules">
+        <div class="rules-box">
+           <div class="rules-header">
+               <h3>RULES</h3>
+               <div class="x">
+                   <div class="line"></div>
+                   <div class="line"></div>
+               </div>
+           </div>
+           <div class="rules-content">
+              <img src="images/image-rules.svg" alt="rules">
+           </div>
+        </div>
+    </section>
+  </main>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Wan Lucas</a>.
   </div>
 </body>
 </html>
