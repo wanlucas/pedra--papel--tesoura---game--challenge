@@ -297,8 +297,10 @@ button {
     display: flex;
     justify-content: center;
 }
+.attribution p {
+    padding: 0 20px;
+}
 a {
-    padding: 0 4px;
     text-decoration: none;
     color: hsl(230, 82%, 66%);
 }
