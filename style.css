@@ -16,7 +16,6 @@ body {
     width: 100%;
     line-height: 1.7rem;
     overflow: hidden;
-
 }
 header {
     display: flex;
@@ -80,7 +79,7 @@ main {
     opacity: var(--op);
 }
 .rules {
-    position: absolute;
+    position: fixed;
     visibility: hidden;
     background: white;
     width: 340px;
@@ -89,8 +88,8 @@ main {
     top: 25%;
     left: 0;
     right: 0;
-    z-index: 10;
     margin: auto;
+    z-index: 10;
 }
 @keyframes actived {
     from {
