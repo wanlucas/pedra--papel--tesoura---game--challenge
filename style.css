@@ -11,20 +11,22 @@ body {
     flex-direction: column;
     align-items: center;
     font-family: 'Barlow Semi Condensed', sans-serif;
-    padding: 3%;
     background:linear-gradient(hsl(214, 47%, 23%) ,hsl(237, 49%, 15%));
     height: 100vh;
     width: 100%;
     line-height: 1.7rem;
     overflow: hidden;
+
 }
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 20px 0;
     padding: 0 20px;
     width: 47%;
-    height: 130px;
+    min-width: 270px;
+    height: 160px;
     border: 2px hsl(217, 16%, 45%) solid;
     border-radius: 14px;
     color: white;
@@ -35,11 +37,13 @@ header {
     font-size: 2.1rem;
     width: 20%;
 }
-.score-box {
+.score-box, main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+}
+.score-box {
     width: 130px;
     height: 80%;
     border-radius: 10px;
@@ -58,11 +62,12 @@ header {
 }
 main {
     padding-top: 5%;
+    height: 100%;
 }
 
 #rules {
-    position: fixed;
-    bottom: 4%;
+    position: absolute;
+    bottom: 5%;
     right: 9%;
     width: 112px;
     height: 36px;
@@ -134,6 +139,7 @@ button {
 
 .choise-box {
     display: grid;
+    width: 100%;
     grid-gap: 25px;
     grid-template-columns: 1fr 1fr;
     grid-template: "p s" "r";
@@ -167,8 +173,8 @@ button {
 }
 .choise-bt {
     position: relative;
-    width: 165px;
-    height: 165px;
+    width: 160px;
+    height: 160px;
     background: hsl(0, 2%, 89%);
     border-radius: 50%;
     border: 20px solid;
@@ -231,6 +237,9 @@ button {
         transform: translateX(0);
     }
 }
+.playing-choises {
+    width: 230px;
+}
 .result, .playing-choises {
     height: 100%;
     display: flex;
@@ -244,7 +253,7 @@ button {
 }
 @keyframes fade {
     to {
-        padding: 0 60px;
+        padding: 0 50px;
         transform: scale(1);
     }
 }
@@ -292,7 +301,6 @@ button {
 .attribution {
     color: white;
     width: 100%;
-    position: fixed;
     bottom: 0;
     display: flex;
     justify-content: center;
@@ -306,4 +314,69 @@ a {
 }
 a:hover {
     color: hsl(230, 74%, 68%);
+}
+
+
+@media only screen and (max-width: 900px) {
+     header {
+         width: 90%;
+     }
+     #playing .choise-bt, .playing-choises {
+         width: 140px;
+         height: 140px;
+     }
+     #result {
+        font-size: 1.4rem;
+     }
+     #play-again {
+         width: 80px;
+         height: 30px;
+     }
+     
+}
+
+@media only screen and (max-width: 600px) {
+    #playing .choise-bt {
+        width: 100px;
+        height: 100px;
+        border-width: 15px;
+    }
+    .choise-bt {
+        width: 120px;
+        height: 120px;
+    }
+    .playing-choises {
+        width: 200px;
+        height: unset;
+    }
+    #rules {
+        position: static;
+    }
+    .attribution {
+        font-size: 0.8rem;
+    }
+    .attribution p {
+        padding: 0 5px;
+    }
+
+   #playing {
+      display: grid;
+      height: 50%;
+      grid-template-areas: "" "b";
+   }
+   .result {
+       grid-area: b;
+       grid-column-start: 1;
+       grid-column-end: 3;
+   }
+   #result {
+       font-size: 3.5rem;
+   }
+   #play-again {
+       font-size: 1rem;
+       margin: 10px 0;
+       width: 220px;
+       height: 50px;
+       border-radius: 10px;
+   }
 }
