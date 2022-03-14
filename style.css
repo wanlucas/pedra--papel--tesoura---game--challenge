@@ -21,11 +21,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 0;
+    margin-top: 40px;
     padding: 0 20px;
-    width: 47%;
+    width: 45%;
+    height: 190px;
     min-width: 270px;
-    height: 160px;
     border: 2px hsl(217, 16%, 45%) solid;
     border-radius: 14px;
     color: white;
@@ -56,11 +56,11 @@ header {
 }
 #score {
     font-size: 3.4rem;
-    margin: 8% 0;
+    margin: 6% 0 15% 0;
     color: hsl(0, 0%, 30%);
 }
 main {
-    padding-top: 5%;
+    padding-top: 2%;
     height: 100%;
 }
 
@@ -172,8 +172,8 @@ button {
 }
 .choise-bt {
     position: relative;
-    width: 160px;
-    height: 160px;
+    width: 180px;
+    height: 180px;
     background: hsl(0, 2%, 89%);
     border-radius: 50%;
     border: 20px solid;
@@ -378,4 +378,14 @@ a:hover {
        height: 50px;
        border-radius: 10px;
    }
+}
+
+@media only screen and (min-width: 1400px) {
+      header {
+          width: 50%;
+      }
+      .choise-bt {
+          width: 200px;
+          height: 200px;
+      }
 }
