@@ -402,6 +402,10 @@ a:hover {
         width: 280px;
         height: 290px;
     }
+    .choise-bt {
+        width: 100px;
+        height: 100px;
+    }
     #result {
         font-size: 2.5rem;
         padding: 8px;
