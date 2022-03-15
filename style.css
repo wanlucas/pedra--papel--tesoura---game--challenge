@@ -19,6 +19,7 @@ body {
     width: 100%;
     min-height: 590px;
     line-height: 1.7rem;
+    overflow: hidden;
 }
 header {
     display: flex;
@@ -151,7 +152,7 @@ button {
 }
 @keyframes moveLeft{
     from {
-        transform: translateX(200px);
+        transform: translateX(100px);
         opacity: 0;
     }
     to {
@@ -177,8 +178,8 @@ button {
 }
 .choise-bt {
     position: relative;
-    width: 180px;
-    height: 180px;
+    width: 170px;
+    height: 170px;
     background: hsl(0, 2%, 89%);
     border-radius: 50%;
     border: 20px solid;
@@ -289,15 +290,18 @@ button {
 #comp-choise button {
    transform-style: preserve-3d;
    transform: translateY(-1000px);
+   opacity: 0;
 }
 @keyframes flip {
     0% {
         transform:  translateY(-400px) rotateX(180deg); 
     } 
     40% {
+        opacity: 1;
         transform: translateY(100px) rotateX(180deg);
     }
     100% {
+        opacity: 1;
         transform: rotateX(0) translateY(0);
     }
 }
@@ -329,12 +333,14 @@ a:hover {
          width: 80px;
          height: 30px;
      }
-     
 }
 
 @media only screen and (max-width: 800px) {
     html {
         font-size: 90%;
+    }
+    body {
+        overflow: initial;
     }
     header {
        width:85%;
@@ -416,8 +422,8 @@ a:hover {
           height: 210px;
       }
       .choise-bt {
-          width: 240px;
-          height: 240px;
-          border-width: 32px;
+          width: 230px;
+          height: 230px;
+          border-width: 28px;
       }
 }
