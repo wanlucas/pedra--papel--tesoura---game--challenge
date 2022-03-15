@@ -5,6 +5,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+html {
+    font-size: 100%;
+}
 body {
     --op: 1;
     display: flex;
@@ -14,17 +17,17 @@ body {
     background:linear-gradient(hsl(214, 47%, 23%) ,hsl(237, 49%, 15%));
     height: 100vh;
     width: 100%;
+    min-height: 590px;
     line-height: 1.7rem;
-    overflow: hidden;
 }
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 3%;
     padding: 0 20px;
     width: 45%;
-    height: 190px;
+    height: 180px;
     min-width: 270px;
     border: 2px hsl(217, 16%, 45%) solid;
     border-radius: 14px;
@@ -60,8 +63,10 @@ header {
     color: hsl(0, 0%, 30%);
 }
 main {
-    padding-top: 2%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 #rules {
@@ -144,9 +149,9 @@ button {
     grid-template: "p s" "r";
     opacity: var(--op);
 }
-@keyframes moveUp {
+@keyframes moveLeft{
     from {
-        transform: translateY(400px);
+        transform: translateX(400px);
         opacity: 0;
     }
     to {
@@ -224,7 +229,6 @@ button {
     color: white;
     margin: auto;
     top: 30%;
-    height: 60%;
     width: 90%;
     opacity: var(--op);
 }
@@ -316,17 +320,11 @@ a:hover {
 }
 
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1100px) {
      header {
-         width: 90%;
+         width: 70%;
      }
-     #playing .choise-bt, .playing-choises {
-         width: 140px;
-         height: 140px;
-     }
-     #result {
-        font-size: 1.4rem;
-     }
+
      #play-again {
          width: 80px;
          height: 30px;
@@ -334,11 +332,23 @@ a:hover {
      
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
+    html {
+        font-size: 90%;
+    }
+    header {
+       width:85%;
+       height: 120px;
+       border-radius: 6px;
+    }
     #playing .choise-bt {
         width: 100px;
         height: 100px;
         border-width: 15px;
+    }
+    #player-choise, #comp-choise {
+        order: -1;
+        padding: 0;
     }
     .choise-bt {
         width: 120px;
@@ -349,10 +359,7 @@ a:hover {
         height: unset;
     }
     #rules {
-        position: static;
-    }
-    .attribution {
-        font-size: 0.8rem;
+        position: initial;
     }
     .attribution p {
         padding: 0 5px;
@@ -373,19 +380,44 @@ a:hover {
    }
    #play-again {
        font-size: 1rem;
-       margin: 10px 0;
        width: 220px;
        height: 50px;
        border-radius: 10px;
    }
 }
+@media only screen and (max-width: 370px) {
+    html {
+        font-size: 75%;
+    }
+    #playing .playing-choises {
+        width: 150px;
+    }
+    .rules {
+        width: 280px;
+        height: 290px;
+    }
+    #result {
+        font-size: 2.5rem;
+        padding: 8px;
+    }
+    #play-again {
+        margin: 2px;
+        width: 180px;
+        height: 35px;
+    }
+}
 
 @media only screen and (min-width: 1400px) {
+      html {
+          font-size: 110%;
+      }
       header {
           width: 50%;
+          height: 210px;
       }
       .choise-bt {
-          width: 200px;
-          height: 200px;
+          width: 240px;
+          height: 240px;
+          border-width: 32px;
       }
 }

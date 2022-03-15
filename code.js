@@ -29,7 +29,7 @@ document.querySelectorAll('.choise-box button').forEach(bt=>{
 document.getElementById('play-again').addEventListener("click",()=> {
     cBoxHTML.style.animation = '';
     cBoxHTML.style.opacity = 0;
-    setTimeout(()=> cBoxHTML.style.animation = 'moveUp 0.5s forwards', 40);
+    setTimeout(()=> cBoxHTML.style.animation = ' moveLeft 0.5s forwards', 40);
     playingHTML.style.visibility = "hidden";
     cBoxHTML.style.visibility = "visible";
 });
