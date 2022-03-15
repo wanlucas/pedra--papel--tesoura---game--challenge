@@ -151,7 +151,7 @@ button {
 }
 @keyframes moveLeft{
     from {
-        transform: translateX(400px);
+        transform: translateX(200px);
         opacity: 0;
     }
     to {
