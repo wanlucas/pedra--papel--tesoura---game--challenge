@@ -97,7 +97,7 @@ main {
     margin: auto;
     z-index: 10;
 }
-@keyframes actived {
+@keyframes active {
     from {
         opacity: 0;
         transform: translateX(50%);
@@ -142,7 +142,7 @@ button {
     justify-content: center;
 }
 
-.choise-box {
+.choice-box {
     display: grid;
     width: 100%;
     grid-gap: 25px;
@@ -160,23 +160,23 @@ button {
         opacity: 1;
     }
 }
-.choise-box div {
+.choice-box div {
     padding: 0 20px;
 }
-.choise-box div:nth-child(1) {
+.choice-box div:nth-child(1) {
     grid-area: "p";
 }
-.choise-box div:nth-child(2) {
+.choice-box div:nth-child(2) {
     grid-area: "s";
 }
-.choise-box div:nth-child(3) {
+.choice-box div:nth-child(3) {
     grid-area: "r";
     grid-column-start: 1;
     grid-column-end: 3;
     display: flex;
     justify-content: center;
 }
-.choise-bt {
+.choice-bt {
     position: relative;
     width: 170px;
     height: 170px;
@@ -184,15 +184,15 @@ button {
     border-radius: 50%;
     border: 20px solid;
 }
-.choise-box button:hover, #rules:hover, #play-again:hover  {
+.choice-box button:hover, #rules:hover, #play-again:hover  {
     transform: scale(1.1);
     filter: brightness(1.1);
 }
-.choise-box button:active, #rules:active, #play-again:active {
+.choice-box button:active, #rules:active, #play-again:active {
     transform: scale(1);
     filter: brightness(0.9);
 }
-.choise-bt::before {
+.choice-bt::before {
     content: '';
     position: absolute;
     top: -2px;
@@ -203,7 +203,7 @@ button {
     height: 100%;
     border-top: 9px solid rgba(94, 94, 94, 0.2);
 }
-.choise-bt img {
+.choice-bt img {
     width: 45%;
 }
 #paper {
@@ -241,10 +241,10 @@ button {
         transform: translateX(0);
     }
 }
-.playing-choises {
+.playing-choices {
     width: 230px;
 }
-.result, .playing-choises {
+.result, .playing-choices {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -275,22 +275,22 @@ button {
     font-size: 0.7rem;
     font-weight: 700;
 }
-.playing-choises p {
+.playing-choices p {
     font-size: 1.2rem;
     letter-spacing: 0.15rem;
 }
-.playing-choises div {
+.playing-choices div {
     padding: 20px 0;
 }
-.playing-choises div button {
+.playing-choices div button {
     border-width: 27px;
     width: 230px;
     height: 230px;
 }
-#comp-choise button {
-   transform-style: preserve-3d;
-   transform: translateY(-1000px);
-   opacity: 0;
+#comp-choice button {
+    transform-style: preserve-3d;
+    transform: translateY(-1000px);
+    opacity: 0;
 }
 @keyframes flip {
     0% {
@@ -325,14 +325,14 @@ a:hover {
 
 
 @media only screen and (max-width: 1100px) {
-     header {
-         width: 70%;
-     }
+    header {
+        width: 70%;
+    }
 
-     #play-again {
-         width: 80px;
-         height: 30px;
-     }
+    #play-again {
+        width: 80px;
+        height: 30px;
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -343,24 +343,24 @@ a:hover {
         overflow: initial;
     }
     header {
-       width:85%;
-       height: 120px;
-       border-radius: 6px;
+        width:85%;
+        height: 120px;
+        border-radius: 6px;
     }
-    #playing .choise-bt {
+    #playing .choice-bt {
         width: 100px;
         height: 100px;
         border-width: 15px;
     }
-    #player-choise, #comp-choise {
+    #player-choice, #comp-choice {
         order: -1;
         padding: 0;
     }
-    .choise-bt {
+    .choice-bt {
         width: 120px;
         height: 120px;
     }
-    .playing-choises {
+    .playing-choices {
         width: 200px;
         height: unset;
     }
@@ -371,38 +371,38 @@ a:hover {
         padding: 0 5px;
     }
 
-   #playing {
-      display: grid;
-      height: 50%;
-      grid-template-areas: "" "b";
-   }
-   .result {
-       grid-area: b;
-       grid-column-start: 1;
-       grid-column-end: 3;
-   }
-   #result {
-       font-size: 3.5rem;
-   }
-   #play-again {
-       font-size: 1rem;
-       width: 220px;
-       height: 50px;
-       border-radius: 10px;
-   }
+    #playing {
+        display: grid;
+        height: 50%;
+        grid-template-areas: "" "b";
+    }
+    .result {
+        grid-area: b;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    #result {
+        font-size: 3.5rem;
+    }
+    #play-again {
+        font-size: 1rem;
+        width: 220px;
+        height: 50px;
+        border-radius: 10px;
+    }
 }
 @media only screen and (max-width: 370px) {
     html {
         font-size: 75%;
     }
-    #playing .playing-choises {
+    #playing .playing-choices {
         width: 150px;
     }
     .rules {
         width: 280px;
         height: 290px;
     }
-    .choise-bt {
+    .choice-bt {
         width: 100px;
         height: 100px;
     }
@@ -418,16 +418,16 @@ a:hover {
 }
 
 @media only screen and (min-width: 1400px) {
-      html {
-          font-size: 110%;
-      }
-      header {
-          width: 50%;
-          height: 210px;
-      }
-      .choise-bt {
-          width: 230px;
-          height: 230px;
-          border-width: 28px;
-      }
+    html {
+        font-size: 110%;
+    }
+    header {
+        width: 50%;
+        height: 210px;
+    }
+    .choice-bt {
+        width: 230px;
+        height: 230px;
+        border-width: 28px;
+    }
 }
