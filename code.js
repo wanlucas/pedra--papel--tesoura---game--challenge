@@ -6,11 +6,10 @@ var pChoice, compCHoise, score = 0;
 
 document.querySelector('#rules').addEventListener("click", ()=>{
     rulesHTML.style.animation = 'active 0.6s forwards';
-    document.body.style.setProperty('--op', 0.2);
 });
+
 document.getElementById('rules-close').addEventListener('click', ()=>{
     rulesHTML.style.animation = '';
-    document.body.style.setProperty('--op', 1);
 });
 
 document.querySelectorAll('.choice-box button').forEach(bt=>{
@@ -37,7 +36,7 @@ document.getElementById('play-again').addEventListener("click",()=> {
 function updatePlayerChoice(choice) {
     playingHTML.querySelector('#player-choice').innerHTML = `
     <div>
-    <button class="choice-bt" id="${choice}" aria-label="${choice}"><img src="images/icon-${choise}.svg" alt="${choise}"></button>
+    <button class="choice-bt" id="${choice}" aria-label="${choice}"><img src="images/icon-${choice}.svg" alt="${choice}"></button>
     </div>`
     pChoice = choice;
 };
@@ -46,7 +45,7 @@ function updateCompChoice() {
     const choice = choices[Math.round(Math.random() * 2)];
     document.querySelector('#comp-choice').innerHTML = `
     <div>
-      <button class="choice-bt" id="${choice}" aria-label="${choice}"><img src="images/icon-${choise}.svg" alt="${choise}"></button>
+      <button class="choice-bt" id="${choice}" aria-label="${choice}"><img src="images/icon-${choice}.svg" alt="${choice}"></button>
     </div>` 
     compCHoise = choice;
 }
@@ -72,6 +71,6 @@ function startAnimations() {
         btSTL.animation = 'flip 1s 1s forwards';
         resSTL.animation = 'fade 1.5s 2s forwards';
     },40);
-    setTimeout(()=>updateScore(),2000);
+    setTimeout(()=> updateScore() ,2000);
 }
 
