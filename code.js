@@ -47,7 +47,8 @@ function verifyWinner(playerChoice, houseChoice) {
 		] == houseChoice ? 'You win' : 'You lose';
 	};
 
-	score += result == 'You win' ? 1 : -1;
+	if(result !== 'Draw') score += result == 'You win' ? 1 : -1;
+
 	return result;
 };
 
